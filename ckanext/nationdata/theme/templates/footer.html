@@ -1,0 +1,28 @@
+<footer class="footer">
+  <div class="container">
+    {% block footer_content %}
+      <nav class="footer-links row-fluid">
+        {% block footer_nav %}
+          <ul class="unstyled row-fluid">
+            {% block footer_links %}
+              <li><a href="#">{{ _('Terms and Conditions') }}</a></li>
+              <li><a href="#">{{ _('Contact us') }}</a></li>
+            {% endblock %}
+          </ul>
+        {% endblock %}
+      </nav>
+      <div class="attribution">
+        {% block footer_attribution %}
+        <p>{% trans %}<strong>Powered by</strong> <a class="ckanfooterlogo" href="http://ckan.org">CKAN</a>{% endtrans %}</p>
+        <p>{% trans %}<strong>Developed by</strong> <a class="code4kenyalogo" href="http://code4kenya.org">Code4Kenya</a>{% endtrans %}</p>
+        {% endblock %}
+      </div>
+    {% endblock %}
+  </div>
+
+  {% block footer_debug %}
+    {% if config.debug %}
+      {% include 'snippets/debug.html' %}
+    {% endif %}
+  {% endblock %}
+</footer>
