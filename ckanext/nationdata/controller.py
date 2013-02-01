@@ -10,7 +10,7 @@ from ckan.lib.navl.validators import not_empty
 from ckan.controllers.home import HomeController
 
 
-class CustomPageController(UserController):
+class CustomPageController(HomeController):
     """This controller is used to extend some of the static pages with
     the accompanying URL routing associated with it."""
     def developers(self):

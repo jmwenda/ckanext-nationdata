@@ -113,10 +113,9 @@ class NationDataPlugin(SingletonPlugin):
         map.connect('/user/edit/{id:.*}',
                     controller='ckanext.example.controller:CustomUserController',
                     action='edit')
-
         map.connect('/package/new', controller='package_formalchemy', action='new')
         map.connect('/package/edit/{id}', controller='package_formalchemy', action='edit')
         map.connect('about', '/about', controller='home', action='about')
-        map.connect('developers', '/developers', controller='ckanext.example.controller:CustomPageController', action='developers')
+        map.connect('developers', '/developers', controller='ckanext.nationdata.controller:CustomPageController', action='developers')
 
         return map

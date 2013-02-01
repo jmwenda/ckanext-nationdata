@@ -4,6 +4,7 @@
   py:strip=""
   >
 
+
   <py:def function="body_class">${h.literal('no-sidebar')}</py:def>
  
   <py:def function="page_title">Welcome</py:def>
@@ -29,15 +30,14 @@
       <div class="span4">
         <div class="action-box">
           <div class="action-box-inner share clearfix">
-          <h1>Playground</h1>
+          <h1>From DataStory</h1>
 
-          <p>Add your own datasets to share them with others and
-          to find other people interested in your data.</p>
+          <p>View Interesting Visualisations and play around with our maps.</p>
           
           <py:choose test="h.check_access('package_create')">
             <a py:when="" href="${h.url_for(controller='package', action='new')}" class="create-button">Create a dataset &raquo;</a>
             <py:otherwise>
-              <a href="${h.url_for(controller='user', action='login')}" class="create-button">Lets Play &raquo;</a>
+              <a href="http://maps.nationmedia.com" class="create-button">Lets Play &raquo;</a>
             </py:otherwise>
           </py:choose>
           </div>
@@ -47,8 +47,9 @@
         <div class="action-box">
           <div class="action-box-inner collaborate clearfix">
           <h1>Our Siasa API</h1>
-          <p>Find out more about working with open data by exploring 
-          these resources:</p>
+          <p>Find out more about working with our political api, grab the code from github.com and get in touch for selection for beta testing:</p>
+<a href="https://github.com/jmwenda/siasa" class="create-button">Github &raquo;</a>
+
           </div>
         </div>
       </div>
